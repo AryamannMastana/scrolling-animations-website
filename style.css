@@ -1,0 +1,222 @@
+html{
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Merriweather Sans", sans-serif;
+    height: 750px;
+}
+
+header h2 {
+    font-weight: 400;
+}
+
+.box-container{
+	width: 65px;
+  height: 65px;
+	margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.scroll-container {
+    height: 175px;
+    padding: 5rem 10rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    column-gap: 3%;
+  }
+
+  .scroll-container-end {
+    height: 175px;
+    padding: 5rem 10rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    column-gap: 3%; 
+    margin-bottom: 50px;
+  }
+
+.scroll-element{
+    border-radius: 5px;
+    padding: 50px;
+    background-color: lightcyan;
+    border: 2px solid rgb(22, 24, 24);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.scroll-element-end{
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 90px;
+  background-color: lightcyan;
+  border: 2px solid rgb(22, 24, 24);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+/* .text-artifact{
+  border-radius: 5px;
+  padding: 50px;
+  background-color: lightcyan;
+  border: 2px solid rgb(22, 24, 24);
+  width: 100%;
+  display: grid;
+} */
+
+/* .text-artifact *{
+  border-radius: 5px;
+  padding: 50px;
+  background-color: lightcyan;
+  border: 2px solid rgb(22, 24, 24);
+  width: 100%;
+  display: grid;
+  text-shadow: 1px 2px 3px #434343;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size:2em;
+} */
+
+.scroll-element:hover {
+    background-color: lightskyblue;
+    transition: background-color .1s;
+}
+
+.scroll-element-end:hover {
+  background-color: lightskyblue;
+  transition: background-color .1s;
+}
+
+@media screen and (max-width: 650px) {
+  .scroll-container,
+  .scroll-container:nth-of-type(even) {
+    flex-direction: column;
+    align-content: inherit;
+  }
+
+  .scroll-element {
+    height: 100%;
+  }
+}
+
+/* Box Animations */
+
+.box{
+	width: 30px;
+	height: 30px;
+	background-color: #008cbc;
+	display: inline-block;
+	animation: pulse 0.6s ease-in infinite alternate;
+}
+.box2, .box3{
+	animation-delay: 0.6s;
+}
+
+@keyframes pulse{
+	100%{
+		opacity: 0;
+	}
+}
+
+
+/* Styling scrollable elements */
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
+
+  .scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+  }
+  
+  .scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+/* Hovering effect using CSS */
+
+.img1:hover ~ .text-artifact .text1{
+  display:block;
+} 
+.img2:hover ~ .text-artifact .text2{
+  display:block;
+} 
+.img3:hover ~ .text-artifact .text3{
+  display:block;
+} 
+.img4:hover ~ .text-artifact .text4{
+  display:block;
+} 
+.img5:hover ~ .text-artifact .text5{
+  display:block;
+}
+.img6:hover ~ .text-artifact .text6{
+  display:block;
+} 
+.img7:hover ~ .text-artifact .text7{
+  display:block;
+} 
+.img8:hover ~ .text-artifact .text8{
+  display:block;
+} 
+.img9:hover ~ .text-artifact .text9{
+  display:block;
+} 
+
